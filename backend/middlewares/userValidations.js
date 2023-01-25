@@ -17,8 +17,8 @@ const userCreateValidation = () => {
       .withMessage('A senha é obrigatória.')
       .isLength({ min: 5 })
       .withMessage('A senha precisa ter no mínimo 5 caracteres.'),
-    body('confirmpassword')
-      .isString()
+    body('confirmPassword')
+      .isString() 
       .withMessage('A confirmação da senha é obrigatória.')
       .custom((value, { req }) => {
         if (value != req.body.password) {
