@@ -143,7 +143,7 @@ const likePhoto = async (req, res) => {
 
 const commentPhoto = async (req, res) => {
   const { id } = req.params
-  const { comments } = req.body
+  const { comment } = req.body
 
   const reqUser = req.user
   const user = await User.findById(reqUser._id)
@@ -155,17 +155,18 @@ const commentPhoto = async (req, res) => {
   }
 
   const userComment = {
-    comments,
+    comment,
     userName: user.name,
     userImage: user.profileImage,
     userId: user._id
   }
 
   photo.comments.push(userComment)
+
   await photo.save()
 
   res.status(200).json({
-    comments: userComment,
+    comment: userComment,
     message: 'O comentário foi adicionado com sucesso'
   })
 }

@@ -32,7 +32,7 @@ const photoUpdateValidation = () => {
 
 const commentValidation = () => {
   return [
-    body('comments')
+    body('comment')
       .isString()
       .withMessage('O comentário é obrigatório')
   ]
