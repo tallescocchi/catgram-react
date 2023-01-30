@@ -31,13 +31,11 @@ export const Navbar = () => {
     if(query) {
       return navigate(`/search?q=${query}`)
     }
-
-    
   }
 
   return (
     <nav id="nav">
-      <Link to='/'>CatGram</Link>
+      <Link to='/'><div className='logo' /></Link>
       <form id="search-form" onSubmit={handleSearch}>
         <BsSearch />
         <input type="text" placeholder='Pesquisar' onChange={(e) => setQuery(e.target.value)}/>

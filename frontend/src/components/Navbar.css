@@ -3,10 +3,17 @@
   justify-content: space-between;
   align-items: center;
 
-  background-color: black;
+  background-color: #4c1d95;
   border-bottom: 1px solid #363636;
 
   padding: 0.1em 1em;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+
+  background-image: url('../assets/logo.png');
 }
 
 #search-form {
@@ -16,7 +23,7 @@
 
 #search-form svg {
   position: absolute;
-  top: 10px;
+  top: 14px;
   left: 9px;
 }
 
@@ -42,6 +49,14 @@
   cursor: pointer;
 }
 
+#nav-links span:hover {
+  color:#e9d5ff;
+}
+
 #nav-links svg {
   font-size: 1.5em;
+}
+
+#nav-links svg:hover {
+  color: #e9d5ff;
 }
