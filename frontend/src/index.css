@@ -41,16 +41,16 @@ label span {
 }
 
 input {
-  background-color: #27272a;
-  color: #AAA;
-  border: 1px solid #3f3f46;
+  background-color: #3f3f46;
+  color: #d4d4d8;
+  border: 1px solid #52525b;
   border-radius: 2px;
   padding: 14px 8px;
   margin-bottom: .6em;
 }
 
 input::placeholder {
-  color: #52525b;
+  color: #a1a1aa;
 }
 
 .btn,
@@ -73,7 +73,7 @@ input[type="submit"] {
 
 input:disabled {
   cursor: not-allowed;
-  background-color: #18181b;
+  background-color: #262626;
 }
 
 .btn:hover, 
