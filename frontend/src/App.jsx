@@ -25,7 +25,7 @@ export function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar />
+        {auth ? <Navbar /> : ''}
           <section className="container">
             <Routes>
               <Route path='/' element={auth ? <Home /> : <Navigate to="/login" />} />
@@ -37,7 +37,7 @@ export function App() {
               <Route path='/photos/:id' element={auth ? <Photo /> : <Navigate to="/login" />} />
             </Routes>
           </section>
-        <Footer />
+          {auth ? <Footer /> : ''}
       </BrowserRouter>
     </div>
   )
